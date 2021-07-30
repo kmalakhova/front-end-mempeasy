@@ -1,8 +1,9 @@
-window.addEventListener('load', function load(event) {
-    document.getElementById('send').onclick = function() {
-        var email = document.getElementById('emailAddress').value;
-        var subject = document.getElementById('emailSubject').value;
-        var body = encodeURIComponent(document.getElementById('emailBody').value);
-        window.open(`mailto:${email}?subject=${subject}&body=${body}`);
-    };
-});
+var alertBox=document.querySelector('.alertBox')
+
+function copyPassword(){
+    var copyPassText = document.getElementById("password");
+    copyPassText.select();
+    copyPassText.setSelectionRange(0,9999);
+    document.execCommand("copy");
+    alertBox.classList.toggle('active');
+}
