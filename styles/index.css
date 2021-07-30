@@ -1,0 +1,100 @@
+
+
+body {
+    width:200px;
+    background: #addff6;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 15px
+}
+
+.logo img {
+    height: 60px;
+    margin-top: 20px;
+}
+
+.copy {
+    position: absolute;
+    /* right:15px; */
+    right:0px;
+    top:0px;
+    cursor: pointer;
+    opacity:0.8;
+}
+
+.copy:hover {
+    opacity:1;
+}
+
+.alerBox {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    /* what on earth is vh? */
+    height:100vh;
+    background:chartreuse;
+}
+
+/* .copy img {
+    height:20px;
+} whay it's not working? */
+
+.password-response img {
+    height:20px;
+}
+
+button {
+    margin-top: 20px;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#575757;
+	/* font-family:Arial; */
+	font-size:13px;
+    font-weight: bold;
+	padding:10px 10px;
+}
+
+button:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.response-container {
+    margin-top: 20px;
+}
+
+.response-container,
+.password-body,
+.hint-body {
+    /* border-radius: 10px; */
+    padding: 10px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.password-response,
+.hint-response {
+	background-color:#eeeeee;
+    padding: 10px;
+    text-align: center;
+	border:1px solid #dfdfdf;
+    font-family: "Book Antiqua";
+    position:relative;
+}
