@@ -1,8 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css');
 
 body {
-    width:200px;
-    background: #addff6;
+    width:240px;
+    /* background: #addff6; */
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -11,11 +12,22 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Helvetica;
-    font-size: 15px
+    font-size: 15px;
+    border: 1px solid #1536514a;
+    margin: 0;
 }
 
 .logo img {
-    height: 60px;
+    height: 70px;
+    margin-top: 20px;
+}
+
+#part1,
+#part2 {
+    font-family: "Roboto Mono", monospace;
+}
+
+#part1 {
     margin-top: 20px;
 }
 
@@ -40,6 +52,16 @@ body {
     /* what on earth is vh? */
     height:100vh;
     background:chartreuse;
+    color:aqua;
+    text-align: center;
+    font-size:4em;
+    display:none;
+}
+
+.alerBox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* .copy img {
@@ -50,30 +72,35 @@ body {
     height:20px;
 }
 
-button {
+.generate-password-button {
     margin-top: 20px;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
-	background-color:#ededed;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#575757;
-	/* font-family:Arial; */
-	font-size:13px;
-    font-weight: bold;
-	padding:10px 10px;
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 30px 13px;
+    /* padding: 13px 50px 13px; */
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-button:hover {
-	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
-	background-color:#dfdfdf;
+.generate-password-button::after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
 }
 
-button:active {
-	position:relative;
-	top:1px;
+.generate-password-button:hover::after {
+    top: 0px;
+    left: 0px;
 }
 
 .response-container {
@@ -85,7 +112,7 @@ button:active {
 .hint-body {
     /* border-radius: 10px; */
     padding: 10px;
-    background: #ffffff;
+    /* background: #ffffff; */
     text-align: center;
 }
 

@@ -6,6 +6,8 @@
     <body>
         <section class="logo">
             <img src="assets/logo.png" alt="MEMPEASY">
+            <div id="part1">MEMPEASY</div>
+            <div id="part2">Memorise Password Easily</div>
         </section>
         <section class="generate-password">
             <button class="generate-password-button">
@@ -16,10 +18,11 @@
             <section class="password-body">
                 Password:
                 <section class="password-response">
-                <img src="assets/copy.png"  alt="copy" class="copy">
+                <img src="assets/copy.png"  alt="copy" class="copy" onclick="copyPassword()">
+                <div class="alertBox"></div>
+                
                 </section>
 
-                <div class="alertBox"></div> 
 
             </section>
             <section class="hint-body">
