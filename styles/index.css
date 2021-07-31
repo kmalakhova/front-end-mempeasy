@@ -3,7 +3,6 @@
 
 body {
     width:240px;
-    /* background: #addff6; */
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -31,54 +30,17 @@ body {
     margin-top: 20px;
 }
 
-.copy {
-    position: absolute;
-    /* right:15px; */
-    right:0px;
-    top:0px;
-    cursor: pointer;
-    opacity:0.8;
-}
-
-.copy:hover {
-    opacity:1;
-}
-
-.alerBox {
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    /* what on earth is vh? */
-    height:100vh;
-    background:chartreuse;
-    color:aqua;
-    text-align: center;
-    font-size:4em;
-    display:none;
-}
-
-.alerBox.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* .copy img {
-    height:20px;
-} whay it's not working? */
-
 .password-response img {
     height:20px;
 }
 
 .generate-password-button {
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 20px;
     font-size: 13px;
     font-weight: 200;
     letter-spacing: 1px;
     padding: 13px 30px 13px;
-    /* padding: 13px 50px 13px; */
     outline: 0;
     border: 1px solid black;
     cursor: pointer;
@@ -104,15 +66,13 @@ body {
 }
 
 .response-container {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .response-container,
 .password-body,
 .hint-body {
-    /* border-radius: 10px; */
     padding: 10px;
-    /* background: #ffffff; */
     text-align: center;
 }
 
@@ -124,4 +84,51 @@ body {
 	border:1px solid #dfdfdf;
     font-family: "Book Antiqua";
     position:relative;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 30px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: #3c3c3c;
+    visibility: hidden;
+    width: 120px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 190%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }

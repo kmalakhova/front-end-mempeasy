@@ -9,26 +9,29 @@
             <div id="part1">MEMPEASY</div>
             <div id="part2">Memorise Password Easily</div>
         </section>
+
         <section class="generate-password">
-            <button class="generate-password-button">
+            <button class="generate-password-button" onclick="getPassword()">
                 GET PASSWORD
             </button>
         </section>
+
         <section class="response-container">
             <section class="password-body">
                 Password:
-                <section class="password-response">
-                <img src="assets/copy.png"  alt="copy" class="copy" onclick="copyPassword()">
-                <div class="alertBox"></div>
-                
-                </section>
-
-
+                <br>
+                <div class="tooltip">
+                    <section class="password-response" onclick="myFunction()" onmouseout="outFunc()">
+                        <span class="tooltiptext" id="myTooltip">CLICK TO COPY</span>
+                            <span id=password></span>
+                    </section>
+                </div>
             </section>
+
             <section class="hint-body">
-                Hint:
+                Associative phrase:
                 <section class="hint-response">
-                    
+                    <span id=hint></span>
                 </section>
             </section>
         </section>
