@@ -1,38 +1,28 @@
 <html>
-  <head>
-    <script src="script.js"></script>
-    <link href="styles/index.css" rel="stylesheet" />
-  </head>
-  <body>
-    <section class="logo">
-      <img src="assets/logo.png" alt="MEMPEASY" />
-      <div id="title">MEMPEASY</div>
-      <div id="description">Memorise Password Easily</div>
-    </section>
+    <head>
+        <script src="script.js"></script>
+        <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+        <link href="styles/index.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="logo"><img src="assets/logo.png" alt="MEMPEASY"/></div>
+        <div class="title">MEMPEASY</div>
+        <div class="description">Memorise Password Easily</div>
 <!-- Generate password button -->
-    <section class="generate-password">
-      <button class="generate-password-button" id="generate-password-button">GET PASSWORD</button>
-    </section>
-    <section class="response-container">
-      <section class="password-body">
-        Password:
-        <br />
-        <div class="tooltip">
-          <section class="password-response">
-            <span class="tooltiptext" id="myTooltip">CLICK TO COPY</span>
+        <button class="generate-password-button" id="generate-password-button">GET PASSWORD</button>
+        <section class="password-body">
+            Password:
+            <br />
+            <div class="tooltip">
+                <span class="tooltiptext" id="myTooltip">CLICK TO COPY</span>
 <!-- Password -->
-                <textarea id="passwordInput" spellcheck="false" readonly ></textarea>
-          </section>
-        </div>
-      </section>
-      <section class="hint-body">
-        Associative phrase:
-        <section class="hint-response">
+                <textarea id="passwordInput" spellcheck="false" readonly></textarea>
+            </div>
+        </section>
+        <section class="hint-body">
+            Associative phrase:
 <!-- Associative phrase -->
             <textarea id="hintInput" spellcheck="false" readonly></textarea>
         </section>
-      </section>
-    </section>
-    </div>
-  </body>
+    </body>
 </html>

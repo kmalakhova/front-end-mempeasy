@@ -34,9 +34,12 @@ function copyPassword() {
 
     const tooltip = document.getElementById('myTooltip');
     tooltip.innerHTML = "COPIED";
+
+    setTimeout(function () {
+        tooltip.classList.remove('isActive');
+        tooltip.textContent = 'CLICK TO COPY';
+    }, 1000);
 };
-
-
 
 
 const registerEventHandlers = () => {
@@ -48,5 +51,7 @@ const registerEventHandlers = () => {
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
+
+
 
 
