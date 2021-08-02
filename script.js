@@ -1,39 +1,52 @@
-// const axios = require('axios');
+// URL="https://back-end-mempeasy.herokuapp.com/"
+URL="http://127.0.0.1:5000/"
 
 const getResponse = () => {
-  // You'll want to use fetch here to grab the data
-  // https://dmitripavlutin.com/javascript-fetch-async-await/
-
-  const data = {
-    hint: 'hint text response',
-    password: 'password text response',
-  };
-  populatePage(data);
+    let jsondata = "";
+    async function getJson(url) {
+        let response = await fetch(url);
+        let data = await response.json()
+        return data;
+    }
+    async function main() {
+        jsondata = await getJson(URL)
+        // console.log(jsondata);
+        populatePage(jsondata)
+    }
+    main();  
 };
 
 const populatePage = (data) => {
-  const passwordInput = document.getElementById('passwordInput');
-  passwordInput.value = data.password;
+    const passwordInput = document.getElementById('passwordInput');
+    passwordInput.value = data.password;
 
-  const hint = document.getElementById('hint');
-  hint.innerText = data.hint;
+    const hintInput = document.getElementById('hintInput');
+    hintInput.value = data.hint;
+
+    const myTooltip = document.getElementById('myTooltip');
+    myTooltip.classList.add('isActive')
 };
 
 function copyPassword() {
-  const passwordInput = document.getElementById('passwordInput');
-  passwordInput.select();
-  document.execCommand('copy');
+    const passwordInput = document.getElementById('passwordInput');
+    passwordInput.select();
+    document.execCommand('copy');
 
-  const tooltip = document.getElementById('myTooltip');
-  tooltip.innerHTML = '👍';
-}
+    const tooltip = document.getElementById('myTooltip');
+    tooltip.innerHTML = "COPIED";
+};
+
+
+
 
 const registerEventHandlers = () => {
-  const resultsButton = document.getElementById('generate-password-button');
-  resultsButton.addEventListener('click', getResponse);
+    const resultsButton = document.getElementById('generate-password-button');
+    resultsButton.addEventListener('click', getResponse);
 
-  const passwordInput = document.getElementById('passwordInput');
-  passwordInput.addEventListener('click', copyPassword);
+    const passwordInput = document.getElementById('passwordInput');
+    passwordInput.addEventListener('click', copyPassword);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
+
+

@@ -2,11 +2,11 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css');
 
 body {
+    /* user-select: none;         */
     width:240px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    min-height: 340px;
+    max-height: auto;
+    padding: 30px 10px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -14,24 +14,21 @@ body {
     font-size: 15px;
     border: 1px solid #1536514a;
     margin: 0;
+    cursor:default;
 }
 
 .logo img {
     height: 70px;
-    margin-top: 20px;
 }
 
-#part1,
-#part2 {
+#title,
+#description {
     font-family: "Roboto Mono", monospace;
+    cursor:default;
 }
 
-#part1 {
+#title {
     margin-top: 20px;
-}
-
-.password-response img {
-    height:20px;
 }
 
 .generate-password-button {
@@ -65,25 +62,16 @@ body {
     left: 0px;
 }
 
-.response-container {
-    margin-top: 10px;
+.password-body {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    /* border: 1px solid red; */
 }
 
-.response-container,
-.password-body,
 .hint-body {
-    padding: 10px;
-    text-align: center;
-}
-
-.password-response,
-.hint-response {
-	background-color:#eeeeee;
-    padding: 10px;
-    text-align: center;
-	border:1px solid #dfdfdf;
-    font-family: "Book Antiqua";
-    position:relative;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /* border: 1px solid red; */
 }
 
 .tooltip {
@@ -92,27 +80,26 @@ body {
 }
 
 .tooltip .tooltiptext {
+    display:none;
     margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 200;
     letter-spacing: 1px;
-    padding: 13px 30px 13px;
     outline: 0;
     border: 1px solid black;
     cursor: pointer;
-    position: relative;
-    background-color: #3c3c3c;
     visibility: hidden;
-    width: 120px;
-    color: rgb(255, 255, 255);
+    width: fit-content;
+    background-color: #555;
+    color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 7px;
     position: absolute;
     z-index: 1;
-    bottom: 190%;
+    bottom: 160%;
     left: 50%;
-    margin-left: -75px;
+    transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -122,6 +109,7 @@ body {
     position: absolute;
     top: 100%;
     left: 50%;
+    transform: translateX(-50%);
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
@@ -132,3 +120,44 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
+.tooltip .tooltiptext.isActive {
+    display:block;
+}
+
+textarea {
+    /* doesn't work */
+    /* vertical-align: middle; */
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+	width:200px;
+	box-sizing:border-box;
+	direction:rtl;
+	display:block;
+	transition:box-shadow 0.5s ease;
+	background-color:#f4f2f2;
+    padding: 5px;
+    text-align: center;
+	border:1px solid #dfdfdf;
+    font-family: "Roboto Mono";
+    font-weight: bolder;
+    cursor:default;
+    /* doesnt work */
+    height: 30px;
+}
+        
+textarea:focus{
+    outline: none;
+}
+
+textarea::selection {
+    outline: none;
+}
+
+#hintInput {
+    /* doesn't work */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
