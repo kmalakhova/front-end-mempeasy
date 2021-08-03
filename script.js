@@ -1,5 +1,9 @@
-// URL="https://back-end-mempeasy.herokuapp.com/"
-URL="http://127.0.0.1:5000/"
+// const URL = "https://back-end-mempeasy.herokuapp.com/"
+const URL = "http://127.0.0.1:5000/"
+
+const passwordInput = document.getElementById('passwordInput');
+const hintInput = document.getElementById('hintInput');
+const myTooltip = document.getElementById('myTooltip');
 
 const getResponse = () => {
     let jsondata = "";
@@ -17,17 +21,14 @@ const getResponse = () => {
 };
 
 const populatePage = (data) => {
-    const passwordInput = document.getElementById('passwordInput');
     var password = data.password;
-    passwordInput.style.height = getContainerHeight(password); 
+    passwordInput.style.height = getContainerHeight(password) + "px"; 
     passwordInput.value = password;
 
-    const hintInput = document.getElementById('hintInput');
     var hint = data.hint;
-    hintInput.style.height = getContainerHeight(hint); 
+    hintInput.style.height = getContainerHeight(hint) + "px"; 
     hintInput.value = hint;
 
-    const myTooltip = document.getElementById('myTooltip');
     myTooltip.classList.add('isActive');
 };
 
@@ -37,34 +38,23 @@ function getContainerHeight(jsonValue) {
 
     var containerHeight;
     containerHeight = container.scrollHeight + 3;
+	console.log(containerHeight)
     container.value = "";
 
     return containerHeight;
 };
 
 function copyPassword() {
-    const passwordInput = document.getElementById('passwordInput');
     passwordInput.select();
     document.execCommand('copy');
-
-    const tooltip = document.getElementById('myTooltip');
-    tooltip.innerHTML = "COPIED";
+    myTooltip.innerHTML = "COPIED";
 
     setTimeout(function () {
-        tooltip.classList.remove('isActive');
-        tooltip.textContent = 'CLICK TO COPY';
+        myTooltip.classList.remove('isActive');
+        myTooltip.textContent = 'CLICK TO COPY';
     }, 1000);
 };
 
-
-
-const registerEventHandlers = () => {
-    const resultsButton = document.getElementById('generate-password-button');
-    resultsButton.addEventListener('click', getResponse);
-
-    const passwordInput = document.getElementById('passwordInput');
-    passwordInput.addEventListener('click', copyPassword);
-};
-
-document.addEventListener('DOMContentLoaded', registerEventHandlers);
+const resultsButton = document.getElementById('generate-password-button');
+resultsButton.addEventListener('click', getResponse);
 

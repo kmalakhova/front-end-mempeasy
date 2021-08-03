@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css');
-
 * {
     /* border: 1px solid red; */
 }
 body {
     user-select: none;        
     width:240px;
+	/* max-height:400px; */
     text-align: center;
+
+	/* dontwork */
     justify-content: center;
     align-items: center;
+	
     font-family: Helvetica;
     font-size: 15px;
     margin: 0;
@@ -18,7 +19,7 @@ body {
 }
 
 .logo img {
-    height: 100px;
+    /* height: 100px; */
     margin-top: 10px;
 }
 
@@ -155,5 +156,6 @@ textarea::selection {
 
 textarea#container {
     visibility: hidden;
+    /* border: 1px solid red; */
 }
 
