@@ -16,32 +16,30 @@ const getResponse = () => {
     main();  
 };
 
-// TODO rename getThis
 const populatePage = (data) => {
     const passwordInput = document.getElementById('passwordInput');
-	var getThis = data.password;
-	passwordInput.style.height = getContainerHeight(getThis); 
-    passwordInput.value = data.password;
+    var password = data.password;
+    passwordInput.style.height = getContainerHeight(password); 
+    passwordInput.value = password;
 
     const hintInput = document.getElementById('hintInput');
-	var getThis = data.hint;
-	hintInput.style.height = getContainerHeight(getThis); 
-    hintInput.value = data.hint;
+    var hint = data.hint;
+    hintInput.style.height = getContainerHeight(hint); 
+    hintInput.value = hint;
 
     const myTooltip = document.getElementById('myTooltip');
     myTooltip.classList.add('isActive');
 };
 
-function getContainerHeight(getThis) {
-	var container = document.getElementById('container');
-	// console.log(container.scrollHeight)
-	container.value = getThis;
+function getContainerHeight(jsonValue) {
+    var container = document.getElementById('container');
+    container.value = jsonValue;
 
-	var containerHeight;
-	containerHeight = container.scrollHeight + 3;
-	container.value = "";
+    var containerHeight;
+    containerHeight = container.scrollHeight + 3;
+    container.value = "";
 
-	return containerHeight;
+    return containerHeight;
 };
 
 function copyPassword() {

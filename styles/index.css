@@ -2,160 +2,158 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css');
 
 * {
-	/* border: 1px solid red; */
+    /* border: 1px solid red; */
 }
 body {
-	user-select: none;		
-	width:240px;
-	/* min-height: 393px;
-	max-height: 450px; */
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-	font-family: Helvetica;
-	font-size: 15px;
-	margin: 0;
-	cursor:default;
-	border: 1px solid #1536514a;
+    user-select: none;        
+    width:240px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 15px;
+    margin: 0;
+    cursor:default;
+    border: 1px solid #1536514a;
 }
 
 .logo img {
-	/* padding: 10px; */
-	height: 100px;
-	margin-top: 10px;
+    height: 100px;
+    margin-top: 10px;
 }
 
 .title,
 .description {
-	font-family: "Roboto Mono", monospace;
-	cursor:default;
+    font-family: "Roboto Mono", monospace;
+    cursor:default;
 }
 
 .generate-password-button {
-	font-family: Arial, Helvetica, sans-serif;
-	margin-top: 20px;
-	margin-bottom: 10px;
-	font-size: 13px;
-	font-weight: 200;
-	letter-spacing: 1px;
-	padding: 13px 30px 13px;
-	outline: 0;
-	border: 1px solid black;
-	cursor: pointer;
-	position: relative;
-	background-color: rgba(0, 0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 30px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .generate-password-button::after {
-	content: "";
-	background-color: #ffe54c;
-	width: 100%;
-	z-index: -1;
-	position: absolute;
-	height: 100%;
-	top: 7px;
-	left: 7px;
-	transition: 0.2s;
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
 }
 
 .generate-password-button:hover::after {
-	top: 0px;
-	left: 0px;
+    top: 0px;
+    left: 0px;
 }
 
 .password-body,
 .hint-body {
-	letter-spacing: 0.5px;
-	font-weight:200;
-	margin: 15px;
+    letter-spacing: 0.5px;
+    font-weight:200;
+    margin: 15px;
 }
 
 .tooltip {
-	position: relative;
-	display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .tooltip .tooltiptext {
-	/* border: 1px solid red; */
-	display:none;
-	/* margin-top: 20px; */
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	font-weight: 200;
-	letter-spacing: 1px;
-	outline: 0;
-	border: 1px solid black;
-	cursor: pointer;
-	visibility: hidden;
-	width: fit-content;
-	background-color: #555;
-	color: #fff;
-	text-align: center;
-	padding: 7px;
-	position: absolute;
-	z-index: 1;
-	bottom: 160%;
-	left: 50%;
-	transform: translateX(-50%);
-	opacity: 0;
-	transition: opacity 0.3s;
+    /* border: 1px solid red; */
+    display:none;
+    /* margin-top: 20px; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    visibility: hidden;
+    width: fit-content;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 7px;
+    position: absolute;
+    z-index: 1;
+    bottom: 160%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .tooltip .tooltiptext::after {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	transform: translateX(-50%);
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #555 transparent transparent transparent;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
-	visibility: visible;
-	opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .tooltip .tooltiptext.isActive {
-	display:block;
+    display:block;
 }
 
 textarea {
-	white-space:normal;
-	resize: none;
-	margin-left: auto;
-	margin-right: auto;
-	width:200px;
-	box-sizing:border-box;
-	direction:rtl;
-	display:block;
-	transition:box-shadow 0.5s ease;
-	background-color:#f4f2f2;
-	padding: 5px;
-	text-align: center;
-	border:1px solid #dfdfdf;
-	font-family: "Roboto Mono";
-	font-weight: 700;
-	cursor:default;
-	height: 30px;
+    white-space:normal;
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+    box-sizing:border-box;
+    direction:ltr;
+    display:block;
+    transition:box-shadow 0.5s ease;
+    background-color:#f4f2f2;
+    padding: 5px;
+    text-align: center;
+    border:1px solid #dfdfdf;
+    font-family: "Roboto Mono";
+    font-weight: 700;
+    cursor:default;
+    height: 30px;
 }
-		
+        
 textarea:focus{
-	outline: none;
+    outline: none;
 }
 
 textarea::selection {
-	outline: none;
+    outline: none;
 }
 
 #hintInput {
-	/* doesn't work */
-	-webkit-user-select: none;
-	user-select: none;
+    /* doesn't work */
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 textarea#container {
-	visibility: hidden;
+    visibility: hidden;
 }
+
