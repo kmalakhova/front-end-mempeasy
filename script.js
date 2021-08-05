@@ -4,6 +4,7 @@ const URL = "http://127.0.0.1:5000/"
 const passwordInput = document.getElementById('passwordInput');
 const hintInput = document.getElementById('hintInput');
 const myTooltip = document.getElementById('myTooltip');
+const resultsButton = document.getElementById('generate-password-button');
 
 const getResponse = () => {
     let jsondata = "";
@@ -14,7 +15,6 @@ const getResponse = () => {
     }
     async function main() {
         jsondata = await getJson(URL)
-        // console.log(jsondata);
         populatePage(jsondata)
     }
     main();  
@@ -55,6 +55,5 @@ function copyPassword() {
     }, 1000);
 };
 
-const resultsButton = document.getElementById('generate-password-button');
 resultsButton.addEventListener('click', getResponse);
-
+passwordInput.addEventListener('click', copyPassword);
