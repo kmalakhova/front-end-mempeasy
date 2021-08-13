@@ -1,5 +1,5 @@
-// const URL = "https://back-end-mempeasy.herokuapp.com/"
-const URL = "http://127.0.0.1:5000/"
+const URL = "https://back-end-mempeasy.herokuapp.com/"
+// const URL = "http://127.0.0.1:5000/"
 
 const passwordInput = document.getElementById('passwordInput');
 const hintInput = document.getElementById('hintInput');
@@ -11,6 +11,8 @@ const getResponse = () => {
     async function getJson(url) {
         let response = await fetch(url);
         let data = await response.json()
+		console.log(response)
+		console.log(data);
         return data;
     }
     async function main() {
@@ -38,7 +40,6 @@ function getContainerHeight(jsonValue) {
 
     var containerHeight;
     containerHeight = container.scrollHeight + 3;
-	console.log(containerHeight)
     container.value = "";
 
     return containerHeight;
