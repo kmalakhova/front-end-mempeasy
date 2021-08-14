@@ -4,9 +4,8 @@
 		<meta charset="UTF-8" />
         <link href="styles/index.css" rel="stylesheet"/>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet"/>
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet" />
     </head>
-    <body>
+    <body id="bodyStyle">
         <div class="logo"><img src="assets/logo.png" alt="MEMPEASY" height="100"/></div>
         <div class="title">MEMPEASY</div>
         <div class="description">Memorise Password Easily</div>
@@ -18,16 +17,16 @@
             <div class="tooltip">
                 <span class="tooltiptext" id="myTooltip">CLICK TO COPY</span>
 <!-- Password -->
-                <textarea id="passwordInput" spellcheck="false" readonly></textarea>
+                <textarea class="textareaStyle" id="passwordInput" spellcheck="false" readonly></textarea>
             </div>
         </section>
         <section class="hint-body">
             Associative phrase:
 <!-- Associative phrase -->
-            <textarea id="hintInput" spellcheck="false" readonly></textarea>
+            <textarea class="textareaStyle" id="hintInput" spellcheck="false" readonly></textarea>
         </section>
 <!-- Hidden textarea -->
-        <textarea id="container"></textarea>
+        <textarea class="textareaStyle" id="container"></textarea>
         <script src="script.js"></script>
     </body>
 </html>

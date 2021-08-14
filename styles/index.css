@@ -1,7 +1,4 @@
-* {
-    /* border: 1px solid red; */
-}
-body {
+#bodyStyle {
     user-select: none;        
     width:240px;
     text-align: center;
@@ -14,6 +11,11 @@ body {
 
 .logo img {
     margin-top: 10px;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;  
 }
 
 .title,
@@ -111,7 +113,7 @@ body {
     display:block;
 }
 
-textarea {
+.textareaStyle {
     white-space:normal;
     resize: none;
     margin-left: auto;
@@ -131,15 +133,15 @@ textarea {
     height: 30px;
 }
         
-textarea:focus{
+.textareaStyle:focus{
     outline: none;
 }
 
-textarea::selection {
+.textareaStyle::selection {
     outline: none;
 }
 
-textarea#container {
+.textareaStyle#container {
     visibility: hidden;
 }
 
